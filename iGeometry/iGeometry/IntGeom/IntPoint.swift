@@ -24,7 +24,7 @@ public struct IntPoint {
         return (x << IntGeom.maxBits) + y
     }
     
-    init(x: Int64, y: Int64) {
+    public init(x: Int64, y: Int64) {
         self.x = x
         self.y = y
         #if Test

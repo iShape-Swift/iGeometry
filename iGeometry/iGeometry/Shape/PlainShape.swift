@@ -12,17 +12,17 @@ public struct PlainShape {
     
     public struct Layout {
         
-        let begin: Int
-        let end: Int
-        let isHole: Bool
+        public let begin: Int
+        public let end: Int
+        public let isHole: Bool
         var isEmpty: Bool {
             return begin == -1
         }
         
     }
     
-    let points: [IntPoint]
-    let layouts: [Layout]
+    public let points: [IntPoint]
+    public let layouts: [Layout]
     
     public init(points: [IntPoint], layouts: [Layout]) {
         self.points = points

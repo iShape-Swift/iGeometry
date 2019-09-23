@@ -18,4 +18,9 @@ public struct Vertex {
     public let index: Index
     public let point: IntPoint
     
+    public init(index: Index, point: IntPoint) {
+        self.index = index
+        self.point = point
+    }
+    
 }

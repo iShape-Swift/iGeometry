@@ -15,6 +15,11 @@ public struct Point: Equatable {
     public let x: Float
     public let y: Float
     
+    public init(x: Float, y: Float) {
+        self.x = x
+        self.y = y
+    }
+    
     public static func == (lhs: Point, rhs: Point) -> Bool {
         return lhs.x == rhs.x && lhs.y == rhs.y
     }
