@@ -6,8 +6,29 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5410EF3E23390F1100EE237B /* IntGeom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410EF3D23390F1100EE237B /* IntGeom.swift */; };
+		5410EF4023390F2500EE237B /* IntPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410EF3F23390F2500EE237B /* IntPoint.swift */; };
+		5410EF4223390F6E00EE237B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410EF4123390F6E00EE237B /* Point.swift */; };
+		5410EF4523390FBC00EE237B /* Point+CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410EF4423390FBC00EE237B /* Point+CGPoint.swift */; };
+		5410EF4723390FDD00EE237B /* CGPoint+Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410EF4623390FDD00EE237B /* CGPoint+Point.swift */; };
+		5410EF4A2339101400EE237B /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410EF492339101400EE237B /* Shape.swift */; };
+		5410EF4C2339103600EE237B /* IntShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410EF4B2339103600EE237B /* IntShape.swift */; };
+		5410EF4E2339104C00EE237B /* PlainShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410EF4D2339104C00EE237B /* PlainShape.swift */; };
+		5410EF502339106200EE237B /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5410EF4F2339106200EE237B /* Vertex.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		5410EF2F23390E0400EE237B /* libiGeometry.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libiGeometry.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		5410EF3D23390F1100EE237B /* IntGeom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntGeom.swift; sourceTree = "<group>"; };
+		5410EF3F23390F2500EE237B /* IntPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntPoint.swift; sourceTree = "<group>"; };
+		5410EF4123390F6E00EE237B /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		5410EF4423390FBC00EE237B /* Point+CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Point+CGPoint.swift"; sourceTree = "<group>"; };
+		5410EF4623390FDD00EE237B /* CGPoint+Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Point.swift"; sourceTree = "<group>"; };
+		5410EF492339101400EE237B /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		5410EF4B2339103600EE237B /* IntShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntShape.swift; sourceTree = "<group>"; };
+		5410EF4D2339104C00EE237B /* PlainShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainShape.swift; sourceTree = "<group>"; };
+		5410EF4F2339106200EE237B /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,8 +61,41 @@
 		5410EF3123390E0400EE237B /* iGeometry */ = {
 			isa = PBXGroup;
 			children = (
+				5410EF482339100700EE237B /* Shape */,
+				5410EF4323390FA300EE237B /* Extension */,
+				5410EF3C23390ED500EE237B /* IntGeom */,
 			);
 			path = iGeometry;
+			sourceTree = "<group>";
+		};
+		5410EF3C23390ED500EE237B /* IntGeom */ = {
+			isa = PBXGroup;
+			children = (
+				5410EF3D23390F1100EE237B /* IntGeom.swift */,
+				5410EF3F23390F2500EE237B /* IntPoint.swift */,
+				5410EF4123390F6E00EE237B /* Point.swift */,
+			);
+			path = IntGeom;
+			sourceTree = "<group>";
+		};
+		5410EF4323390FA300EE237B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5410EF4423390FBC00EE237B /* Point+CGPoint.swift */,
+				5410EF4623390FDD00EE237B /* CGPoint+Point.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5410EF482339100700EE237B /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				5410EF492339101400EE237B /* Shape.swift */,
+				5410EF4B2339103600EE237B /* IntShape.swift */,
+				5410EF4D2339104C00EE237B /* PlainShape.swift */,
+				5410EF4F2339106200EE237B /* Vertex.swift */,
+			);
+			path = Shape;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +139,7 @@
 				TargetAttributes = {
 					5410EF2E23390E0400EE237B = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -110,6 +165,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5410EF4E2339104C00EE237B /* PlainShape.swift in Sources */,
+				5410EF4023390F2500EE237B /* IntPoint.swift in Sources */,
+				5410EF502339106200EE237B /* Vertex.swift in Sources */,
+				5410EF4A2339101400EE237B /* Shape.swift in Sources */,
+				5410EF3E23390F1100EE237B /* IntGeom.swift in Sources */,
+				5410EF4C2339103600EE237B /* IntShape.swift in Sources */,
+				5410EF4223390F6E00EE237B /* Point.swift in Sources */,
+				5410EF4523390FBC00EE237B /* Point+CGPoint.swift in Sources */,
+				5410EF4723390FDD00EE237B /* CGPoint+Point.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,28 +294,43 @@
 		5410EF3923390E0400EE237B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		5410EF3A23390E0400EE237B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
