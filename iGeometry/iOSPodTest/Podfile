@@ -1,0 +1,8 @@
+platform :ios, '11'
+
+target 'iOSPodTest' do
+  use_frameworks!
+
+  pod 'iGeometry',           :path => '../iGeometry'
+
+end
