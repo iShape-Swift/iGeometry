@@ -10,7 +10,7 @@ import Foundation
 
 public extension Array where Element == CGPoint {
     
-    func points() -> [Point]  {
+    func toPoints() -> [Point]  {
         let n = self.count
         var array = [Point].init(repeating: .zero, count: n)
         var i = 0
@@ -25,13 +25,13 @@ public extension Array where Element == CGPoint {
 
 public extension Array where Element == [CGPoint] {
     
-    func toPoint() -> [[Point]]  {
+    func toPaths() -> [[Point]]  {
         let n = self.count
         var array = [[Point]]()
         array.reserveCapacity(n)
         var i = 0
         while i < n {
-            array.append(self[i].points())
+            array.append(self[i].toPoints())
             i &+= 1
         }
         return array

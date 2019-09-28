@@ -20,7 +20,7 @@ public struct IntGeom {
         self.scale = scale
         self.invertScale = 1 / scale
     }
-    
+
     public func int(float: Float) -> Int64 {
         return Int64(float * scale)
     }
