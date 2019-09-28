@@ -42,9 +42,7 @@ public struct PlainShape {
         layouts.reserveCapacity(iShape.holes.count + 1)
         
         var start = 0
-        var end: Int
-        
-        end = start + iShape.hull.count - 1
+        var end = start + iShape.hull.count - 1
         points.append(contentsOf: iShape.hull)
         
         let layout = Layout(begin: start, end: end, isHole: false)
