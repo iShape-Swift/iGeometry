@@ -18,6 +18,6 @@ Pod::Spec.new do |spec|
   spec.tvos.deployment_target     = '9.0'
   spec.osx.deployment_target      = '10.9'
 
-  spec.source_files               = 'iGeometry/Source/**/*.swift'
+  spec.source_files               = 'Source/**/*.swift'
 
 end
