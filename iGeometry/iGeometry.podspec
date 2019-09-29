@@ -4,8 +4,8 @@ Pod::Spec.new do |spec|
   spec.version                    = '1.0'
   spec.summary                    = 'Vectors operations in integer field'
   spec.authors                    = 'Nail Sharipov'
-  spec.source                     = { :git => 'git@github.com:NailxSharipov/iGeometry.git', :tag => spec.version.to_s }
-  spec.license                    = 'MIT'
+  spec.source                     = { :git => 'https://github.com:NailxSharipov/iGeometry.git', :tag => spec.version.to_s }
+  spec.license                    = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage                   = 'https://github.com/NailxSharipov/iGeometry'
 
   
