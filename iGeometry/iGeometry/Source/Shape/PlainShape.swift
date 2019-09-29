@@ -19,6 +19,11 @@ public struct PlainShape {
             return begin == -1
         }
         
+        public init(begin: Int, end: Int, isHole: Bool = false) {
+            self.begin = begin
+            self.end = end
+            self.isHole = isHole
+        }
     }
     
     public let points: [IntPoint]
