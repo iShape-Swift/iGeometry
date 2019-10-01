@@ -9,5 +9,5 @@ Vectors operations in integer field
 
 Add the following to your `Podfile`:
 ```ruby
-pod 'iShapeTriangulation'
+pod 'iGeometry
 ```
