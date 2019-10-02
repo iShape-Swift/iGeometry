@@ -17,6 +17,7 @@ public extension PlainShape {
         }
         
         case valid
+        case hasSamePoints(Int, Int)
         case hullIsNotClockWise
         case holeIsNotCounterClockWise(Int)
         case hullIsSelfIntersecting(Edge, Edge)
@@ -36,7 +37,7 @@ public extension PlainShape {
             return result
         }
         
-        result = self.validateBoundingRect()
+        result = self.validateSamePoints()
 
         return result
     }
@@ -88,7 +89,18 @@ public extension PlainShape {
         return .valid
     }
     
-    private func validateBoundingRect() -> Validation {
+    private func validateSamePoints() -> Validation {
+        let n = self.points.count
+        for i in 0..<n - 1 {
+            let a = self.points[i]
+            for j in i+1..<n {
+                let b = self.points[j]
+                if a.x == b.x && a.y == b.y {
+                    return .hasSamePoints(i, j)
+                }
+            }
+        }
+    
         return .valid
     }
 
@@ -114,14 +126,17 @@ public extension PlainShape {
             let a = self.points[i]
             let b = self.points[i + 1]
             var j = i + 2
+            var c = self.points[j]
+            var j0 = j
+            j = j + 1 <= end ? j + 1 : begin
             while j != i {
-                let k = j + 1 <= end ? j + 1 : begin
-                let c = self.points[j]
-                let d = self.points[k]
+                let d = self.points[j]
                 if PlainShape.areSegmentsIntersecting(a: a, b: b, c: c, d: d) {
-                    return (Validation.Edge(a: i, b: i + 1), Validation.Edge(a: j, b: k))
+                    return (Validation.Edge(a: i, b: i + 1), Validation.Edge(a: j0, b: j))
                 }
-                j = k
+                c = d
+                j0 = j
+                j = j + 1 <= end ? j + 1 : begin
             }
         }
         return nil
