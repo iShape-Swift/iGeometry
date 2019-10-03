@@ -37,7 +37,7 @@ public extension PlainShape {
             return result
         }
         
-        result = self.validateSamePoints()
+//        result = self.validateSamePoints()
 
         return result
     }
@@ -161,14 +161,24 @@ public extension PlainShape {
     
     
     private static func areSegmentsIntersecting(a: IntPoint, b: IntPoint, c: IntPoint, d: IntPoint) -> Bool {
-        return isCCW(a: a, b: c, c: d) != isCCW(a: b, b: c, c: d) && isCCW(a: a, b: b, c: c) != isCCW(a: a, b: b, c: d)
+        let x0 = isCCW(a: a, b: c, c: d)
+        let x1 = isCCW(a: b, b: c, c: d)
+        let x2 = isCCW(a: a, b: b, c: c)
+        let x3 = isCCW(a: a, b: b, c: d)
+        return x0 != x1 && x2 != x3 && x0 != 0 && x1 != 0 && x2 != 0 && x3 != 0
     }
     
-    private static func isCCW(a: IntPoint, b: IntPoint, c: IntPoint) -> Bool {
+    private static func isCCW(a: IntPoint, b: IntPoint, c: IntPoint) -> Int {
         let m0 = (c.y - a.y) * (b.x - a.x)
         let m1 = (b.y - a.y) * (c.x - a.x)
         
-        return m0 < m1
+        if m0 < m1 {
+            return 1
+        } else if m0 > m1 {
+            return -1
+        } else {
+            return 0
+        }
     }
 }
 
