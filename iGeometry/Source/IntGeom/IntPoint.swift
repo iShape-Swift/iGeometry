@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct IntPoint {
+public struct IntPoint: Equatable {
     
     public static let zero = IntPoint(x: 0, y: 0)
     
@@ -31,5 +31,9 @@ public struct IntPoint {
         self.X = IntGeom.defGeom.float(int: x)
         self.Y = IntGeom.defGeom.float(int: y)
         #endif
+    }
+    
+    public static func == (lhs: IntPoint, rhs: IntPoint) -> Bool {
+        return lhs.x == rhs.x && lhs.y == rhs.y
     }
 }
