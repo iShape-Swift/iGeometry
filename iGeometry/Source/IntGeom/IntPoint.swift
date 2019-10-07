@@ -15,7 +15,7 @@ public struct IntPoint: Equatable {
     public let x: Int64
     public let y: Int64
     
-    #if Test
+    #if iShapeTest
     public let X: Float
     public let Y: Float
     #endif
@@ -27,7 +27,7 @@ public struct IntPoint: Equatable {
     public init(x: Int64, y: Int64) {
         self.x = x
         self.y = y
-        #if Test
+        #if iShapeTest
         self.X = IntGeom.defGeom.float(int: x)
         self.Y = IntGeom.defGeom.float(int: y)
         #endif

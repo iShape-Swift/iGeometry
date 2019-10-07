@@ -9,7 +9,7 @@
 import Foundation
 
 public struct PlainShape {
-    
+
     public struct Layout {
         
         public let begin: Int
@@ -26,12 +26,19 @@ public struct PlainShape {
         }
     }
     
+    public static let empty = PlainShape(points: [], layouts: [])
+    
     public let points: [IntPoint]
     public let layouts: [Layout]
     
     public init(points: [IntPoint], layouts: [Layout]) {
         self.points = points
         self.layouts = layouts
+    }
+    
+    public init(points: [IntPoint]) {
+        self.points = points
+        self.layouts = [Layout(begin: 0, end: points.count - 1)]
     }
     
     public init(iShape: IntShape) {
