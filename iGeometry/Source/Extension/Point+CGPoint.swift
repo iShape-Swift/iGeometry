@@ -12,7 +12,7 @@ public extension Array where Element == Point {
     
     func toCGPoints() -> [CGPoint]  {
         let n = self.count
-        var array = [CGPoint].init(repeating: .zero, count: n)
+        var array = Array<CGPoint>(repeating: .zero, count: n)
         var i = 0
         while i < n {
             array[i] = self[i].toCGPoint
