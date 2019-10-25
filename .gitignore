@@ -1,0 +1,5 @@
+*.pbxuser
+!default.pbxuser
+xcuserdata/
+
+.DS_Store
