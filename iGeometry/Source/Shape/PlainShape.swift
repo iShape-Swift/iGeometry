@@ -58,6 +58,13 @@ public struct PlainShape: Equatable {
         return pathes
     }
     
+    public init(pointsCapacity: Int, layoutsCapacity: Int) {
+        self.points = Array<IntPoint>()
+        self.points.reserveCapacity(pointsCapacity)
+        self.layouts = Array<Layout>()
+        self.layouts.reserveCapacity(layoutsCapacity)
+    }
+    
     public init(points: [IntPoint], layouts: [Layout]) {
         self.points = points
         self.layouts = layouts
@@ -144,5 +151,13 @@ public struct PlainShape: Equatable {
         let length = lastLayout.begin + lastLayout.length - tailStart
         let slice = Array(self.points[tailStart..<tailStart + length])
         self.points.replaceSubrange(layout.begin..<layout.begin + length, with: slice)
+    }
+    
+    public mutating func replace(index: Int, path: [IntPoint]) {
+        let oldLayout = self.layouts[index]
+        let newLength = path.count
+        if newLength != oldLayout.length, index + 1 != self.layouts.count {
+            
+        }
     }
 }
