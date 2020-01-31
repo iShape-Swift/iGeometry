@@ -155,9 +155,39 @@ public struct PlainShape: Equatable {
     
     public mutating func replace(index: Int, path: [IntPoint]) {
         let oldLayout = self.layouts[index]
-        let newLength = path.count
-        if newLength != oldLayout.length, index + 1 != self.layouts.count {
-            
+        let newLayout = Layout(
+            begin: oldLayout.begin,
+            length: path.count,
+            isClockWise: oldLayout.isClockWise
+        )
+        if newLayout.length == oldLayout.length {
+            var j = 0
+            for i in oldLayout.begin...oldLayout.end {
+                self.points[i] = path[j]
+                j += 1
+            }
+        } else if index + 1 == self.layouts.count {
+            self.layouts[index] = newLayout
+            self.points.removeLast(oldLayout.length)
+            self.points.append(contentsOf: path)
+        } else {
+            self.layouts[index] = newLayout
+            let tail = Array(self.points[oldLayout.end + 1..<self.points.count])
+            let removeLength = self.points.count - oldLayout.begin
+            self.points.removeLast(removeLength)
+            self.points.append(contentsOf: path)
+            self.points.append(contentsOf: tail)
+            let shift = newLayout.length - oldLayout.length
+            var i = index + 1
+            while i < self.layouts.count {
+                let lt = self.layouts[i]
+                self.layouts[i] = Layout(
+                    begin: lt.begin + shift,
+                    length: lt.length,
+                    isClockWise: lt.isClockWise
+                )
+                i += 1
+            }
         }
     }
 }
