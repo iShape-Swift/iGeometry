@@ -138,7 +138,7 @@ public struct PlainShape: Equatable {
     public mutating func remove(index: Int) {
         let count = self.layouts.count
         guard index + 1 != count else {
-            self.layouts.remove(at: index)
+            self.layouts.removeLast()
             self.points.removeAll()
             return
         }
