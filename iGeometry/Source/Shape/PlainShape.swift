@@ -45,18 +45,6 @@ public struct PlainShape: Equatable {
     
     public private (set) var points: [IntPoint]
     public private (set) var layouts: [Layout]
-
-    public var pathes: [[IntPoint]] {
-        let n = layouts.count
-        var pathes = Array<[IntPoint]>()
-        pathes.reserveCapacity(n)
-        for i in 0..<n {
-            let layout = self.layouts[i]
-            let slice = self.points[layout.begin...layout.end]
-            pathes.append(Array(slice))
-        }
-        return pathes
-    }
     
     public init(pointsCapacity: Int, layoutsCapacity: Int) {
         self.points = Array<IntPoint>()
