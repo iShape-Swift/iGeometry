@@ -31,7 +31,7 @@ public struct Triangle {
         return Triangle.inscribedСircle(a: a, b: b, c: c)
     }
     
-    static func circumscribedСircle(a: Point, b: Point, c: Point) -> Circle {
+    public static func circumscribedСircle(a: Point, b: Point, c: Point) -> Circle {
         let d = 2 * (a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y))
         let x = ((a.x * a.x + a.y * a.y) * (b.y - c.y) + (b.x * b.x + b.y * b.y) * (c.y - a.y) + (c.x * c.x + c.y * c.y) * (a.y - b.y)) / d
         let y = ((a.x * a.x + a.y * a.y) * (c.x - b.x) + (b.x * b.x + b.y * b.y) * (a.x - c.x) + (c.x * c.x + c.y * c.y) * (b.x - a.x)) / d
@@ -41,7 +41,7 @@ public struct Triangle {
         return Circle(center: Point(x: x, y: y), radius: r)
     }
     
-    static func inscribedСircle(a: Point, b: Point, c: Point) -> Circle {
+    public static func inscribedСircle(a: Point, b: Point, c: Point) -> Circle {
         let ABx = a.x - b.x
         let ABy = a.y - b.y
         let AB = sqrt(ABx * ABx + ABy * ABy)
