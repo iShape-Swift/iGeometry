@@ -27,13 +27,7 @@ public struct PlainShape: Equatable {
         var isEmpty: Bool {
             return begin == -1
         }
-        
-        public init(begin: Int, end: Int, isHole: Bool = false) {
-            self.begin = begin
-            self.length = begin - end
-            self.isClockWise = !isHole
-        }
-        
+
         public init(begin: Int, length: Int, isClockWise: Bool) {
             self.begin = begin
             self.length = length
