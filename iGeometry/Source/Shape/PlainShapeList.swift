@@ -11,7 +11,7 @@ public struct PlainShapeList {
     
     public static let empty = PlainShapeList(points: [], layouts: [], segments: [])
     
-    public struct Segment {
+    public struct Segment: Equatable {
         
         public let begin: Int
         public let length: Int
