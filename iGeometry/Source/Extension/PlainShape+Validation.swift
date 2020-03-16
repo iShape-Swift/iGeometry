@@ -26,6 +26,11 @@ public extension PlainShape {
         case holeIsIntersectingHole(Edge, Edge)
     }
     
+    func isClockWise(index:  Int) -> Bool {
+        let layout = self.layouts[index]
+        return self.isClockWise(begin: layout.begin, end: layout.end)
+    }
+
     func validate() -> Validation {
         var result = self.validateVerticesList()
         guard case .valid = result else {
@@ -60,6 +65,7 @@ public extension PlainShape {
     
         return .valid
     }
+
     
     private func validateIntersections() -> Validation {
         let n = layouts.count
