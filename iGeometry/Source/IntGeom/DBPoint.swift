@@ -1,5 +1,5 @@
 //
-//  DPoint.swift
+//  DBPoint.swift
 //  iGeometry
 //
 //  Created by Nail Sharipov on 09.04.2020.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-public struct DPoint {
+public struct DBPoint {
     
-    public static let zero = DPoint(x: 0, y: 0)
+    public static let zero = DBPoint(x: 0, y: 0)
     
     public let x: Double
     public let y: Double
