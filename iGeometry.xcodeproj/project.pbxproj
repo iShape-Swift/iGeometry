@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		543DF7BD2463FF660086B9AC /* PlainShape+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543DF7BC2463FF660086B9AC /* PlainShape+Initializers.swift */; };
 		54527CD0233E5C9A003F9798 /* iGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 54527CCE233E5C9A003F9798 /* iGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54527CE3233E5CBB003F9798 /* IntShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527CD8233E5CBB003F9798 /* IntShape.swift */; };
 		54527CE4233E5CBB003F9798 /* PlainShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527CD9233E5CBB003F9798 /* PlainShape.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		543DF7BC2463FF660086B9AC /* PlainShape+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlainShape+Initializers.swift"; sourceTree = "<group>"; };
 		54527CCB233E5C9A003F9798 /* iGeometry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iGeometry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54527CCE233E5C9A003F9798 /* iGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iGeometry.h; sourceTree = "<group>"; };
 		54527CCF233E5C9A003F9798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				54527CD9233E5CBB003F9798 /* PlainShape.swift */,
 				54527CDA233E5CBB003F9798 /* Shape.swift */,
 				54527CDB233E5CBB003F9798 /* Vertex.swift */,
+				543DF7BC2463FF660086B9AC /* PlainShape+Initializers.swift */,
 			);
 			path = Shape;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				54527CE5233E5CBB003F9798 /* Shape.swift in Sources */,
 				54527CEA233E5CBB003F9798 /* IntPoint.swift in Sources */,
 				54527CE3233E5CBB003F9798 /* IntShape.swift in Sources */,
+				543DF7BD2463FF660086B9AC /* PlainShape+Initializers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
