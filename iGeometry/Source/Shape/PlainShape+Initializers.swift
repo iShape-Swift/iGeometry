@@ -16,7 +16,7 @@ public extension PlainShape {
     ///   - points: Linear array of all your polygon vertices. All hull's vertices must be list in clockwise order. All holes vertices must be listed in counterclockwise order.
     ///   - hull: range of the hull vertices in points array
     ///   - holes: array of ranges for all holes
-    init(precision: CGFloat = 0.0001, points: [CGPoint], hull: ArraySlice<CGPoint>?, holes: [ArraySlice<CGPoint>]?) {
+    init(precision: CGFloat = 0.0001, points: [CGPoint], hull: ArraySlice<CGPoint>, holes: [ArraySlice<CGPoint>]? = nil) {
         self.init(iGeom: IntGeom(scale: Float(1 / precision)), points: points, hull: hull, holes: holes)
     }
 
@@ -26,12 +26,12 @@ public extension PlainShape {
     ///   - points: Linear array of all your polygon vertices. All hull's vertices must be list in clockwise order. All holes vertices must be listed in counterclockwise order.
     ///   - hull: range of the hull vertices in points array
     ///   - holes: array of ranges for all holes
-    init(iGeom: IntGeom, points: [CGPoint], hull: ArraySlice<CGPoint>?, holes: [ArraySlice<CGPoint>]?) {
+    init(iGeom: IntGeom, points: [CGPoint], hull: ArraySlice<CGPoint>, holes: [ArraySlice<CGPoint>]? = nil) {
         let intPoints = iGeom.int(points: points.toPoints())
 
         var layouts = [PlainShape.Layout]()
 
-        if let hull = hull, let holes = holes {
+        if let holes = holes {
             layouts.reserveCapacity(holes.count + 1)
             layouts.append(PlainShape.Layout(begin: 0, length: hull.endIndex, isClockWise: true))
             for hole in holes {
@@ -42,6 +42,32 @@ public extension PlainShape {
             layouts.append(PlainShape.Layout(begin: 0, length: intPoints.count, isClockWise: true))
         }
         self.init(points: intPoints, layouts: layouts)
+    }
+    
+    /// Data to represent complex shape
+    /// - Parameters:
+    ///   - precision: The minimum required precision. It's a minimum linear distance after which points will be recognized as the same.
+    ///   - hull: the hull vertices
+    ///   - holes: list of all holes
+    init(precision: CGFloat = 0.0001, hull: [CGPoint], holes: [[CGPoint]]? = nil) {
+        self.init(iGeom: IntGeom(scale: Float(1 / precision)), hull: hull, holes: holes)
+    }
+    
+    /// Data to represent complex shape
+    /// - Parameters:
+    ///   - iGeom: Int <-> Float converter
+    ///   - hull: points of the hull vertices
+    ///   - holes: array of points for all holes
+    init(iGeom: IntGeom, hull: [CGPoint], holes: [[CGPoint]]? = nil) {
+        let intPoints = iGeom.int(points: hull.toPoints())
+        var shape = PlainShape(points: intPoints)
+        if let holes = holes {
+            for hole in holes {
+                shape.add(path: iGeom.int(points: hole.toPoints()), isClockWise: false)
+            }
+        }
+
+        self.init(points: shape.points, layouts: shape.layouts)
     }
     
 }
