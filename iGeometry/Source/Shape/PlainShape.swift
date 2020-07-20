@@ -37,8 +37,8 @@ public struct PlainShape: Equatable {
     
     public static let empty = PlainShape(points: [], layouts: [])
     
-    public private (set) var points: [IntPoint]
-    public private (set) var layouts: [Layout]
+    public var points: [IntPoint]
+    public var layouts: [Layout]
     
     public init(pointsCapacity: Int, layoutsCapacity: Int) {
         self.points = Array<IntPoint>()
