@@ -16,10 +16,10 @@ public struct IntPoint {
     public let x: Int64
     public let y: Int64
     
-//    #if iShapeTest
+#if DEBUG
     public let X: Float
     public let Y: Float
-//    #endif
+#endif
     
     public var bitPack: Int64 {
         return (x << IntGeom.maxBits) + y
@@ -28,10 +28,10 @@ public struct IntPoint {
     public init(x: Int64, y: Int64) {
         self.x = x
         self.y = y
-//        #if iShapeTest
+#if DEBUG
         self.X = IntGeom.defGeom.float(int: x)
         self.Y = IntGeom.defGeom.float(int: y)
-//        #endif
+#endif
     }
     
 }

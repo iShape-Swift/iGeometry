@@ -17,14 +17,17 @@ public extension IntPoint {
         return IntPoint(x: left.x - right.x, y: left.y - right.y)
     }
     
+    @inline(__always)
     func scalarMultiply(point: IntPoint) -> Int64 { // dot product
         return self.x * point.x + point.y * self.y
     }
     
+    @inline(__always)
     func crossProduct(point: IntPoint) -> Int64 { // cross product
         return self.x * point.y - self.y * point.x
     }
     
+    @inline(__always)
     func normal(iGeom: IntGeom) -> IntPoint {
         let p = iGeom.float(point: self)
         let l = sqrt(p.x * p.x + p.y * p.y)
@@ -35,6 +38,7 @@ public extension IntPoint {
         return iGeom.int(point: Point(x: x, y: y))
     }
     
+    @inline(__always)
     func sqrDistance(point: IntPoint) -> Int64 {
         let dx = point.x - self.x
         let dy = point.y - self.y
