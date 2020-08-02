@@ -3,6 +3,7 @@
 //  iGeometry
 //
 //  Created by Nail Sharipov on 13.02.2020.
+//  Copyright © 2020 iShape. All rights reserved.
 //
 
 import Foundation
