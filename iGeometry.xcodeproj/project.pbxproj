@@ -54,6 +54,7 @@
 				54527CCC233E5C9A003F9798 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		54527CCC233E5C9A003F9798 /* Products */ = {
 			isa = PBXGroup;

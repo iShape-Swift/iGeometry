@@ -2,4 +2,6 @@
 !default.pbxuser
 xcuserdata/
 
+Carthage
+
 .DS_Store
