@@ -7,33 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		543DF7BD2463FF660086B9AC /* PlainShape+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543DF7BC2463FF660086B9AC /* PlainShape+Initializers.swift */; };
 		54527CD0233E5C9A003F9798 /* iGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 54527CCE233E5C9A003F9798 /* iGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54527CE3233E5CBB003F9798 /* IntShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527CD8233E5CBB003F9798 /* IntShape.swift */; };
-		54527CE4233E5CBB003F9798 /* PlainShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527CD9233E5CBB003F9798 /* PlainShape.swift */; };
-		54527CE5233E5CBB003F9798 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527CDA233E5CBB003F9798 /* Shape.swift */; };
-		54527CE6233E5CBB003F9798 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527CDB233E5CBB003F9798 /* Vertex.swift */; };
-		54527CE7233E5CBB003F9798 /* Point+CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527CDD233E5CBB003F9798 /* Point+CGPoint.swift */; };
-		54527CE8233E5CBB003F9798 /* CGPoint+Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527CDE233E5CBB003F9798 /* CGPoint+Point.swift */; };
-		54527CE9233E5CBB003F9798 /* IntGeom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527CE0233E5CBB003F9798 /* IntGeom.swift */; };
-		54527CEA233E5CBB003F9798 /* IntPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527CE1233E5CBB003F9798 /* IntPoint.swift */; };
-		54527CEB233E5CBB003F9798 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54527CE2233E5CBB003F9798 /* Point.swift */; };
+		54AFC23C24D69E6500B94D58 /* IntShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC22824D69E6500B94D58 /* IntShape.swift */; };
+		54AFC23D24D69E6500B94D58 /* PlainShape+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC22924D69E6500B94D58 /* PlainShape+Initializers.swift */; };
+		54AFC23E24D69E6500B94D58 /* PlainShapeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC22A24D69E6500B94D58 /* PlainShapeList.swift */; };
+		54AFC23F24D69E6500B94D58 /* PlainShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC22B24D69E6500B94D58 /* PlainShape.swift */; };
+		54AFC24024D69E6500B94D58 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC22C24D69E6500B94D58 /* Shape.swift */; };
+		54AFC24124D69E6500B94D58 /* IntPoint+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC22D24D69E6500B94D58 /* IntPoint+Array.swift */; };
+		54AFC24224D69E6500B94D58 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC22E24D69E6500B94D58 /* Vertex.swift */; };
+		54AFC24324D69E6500B94D58 /* Point+CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC23024D69E6500B94D58 /* Point+CGPoint.swift */; };
+		54AFC24424D69E6500B94D58 /* CGPoint+Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC23124D69E6500B94D58 /* CGPoint+Point.swift */; };
+		54AFC24524D69E6500B94D58 /* PlainShape+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC23224D69E6500B94D58 /* PlainShape+Validation.swift */; };
+		54AFC24624D69E6500B94D58 /* IntGeom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC23424D69E6500B94D58 /* IntGeom.swift */; };
+		54AFC24724D69E6500B94D58 /* IntPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC23524D69E6500B94D58 /* IntPoint.swift */; };
+		54AFC24824D69E6500B94D58 /* DBPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC23624D69E6500B94D58 /* DBPoint.swift */; };
+		54AFC24924D69E6500B94D58 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC23724D69E6500B94D58 /* Point.swift */; };
+		54AFC24A24D69E6500B94D58 /* IntPoint+Geom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC23924D69E6500B94D58 /* IntPoint+Geom.swift */; };
+		54AFC24B24D69E6500B94D58 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC23A24D69E6500B94D58 /* Circle.swift */; };
+		54AFC24C24D69E6500B94D58 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC23B24D69E6500B94D58 /* Triangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		543DF7BC2463FF660086B9AC /* PlainShape+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlainShape+Initializers.swift"; sourceTree = "<group>"; };
 		54527CCB233E5C9A003F9798 /* iGeometry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iGeometry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54527CCE233E5C9A003F9798 /* iGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iGeometry.h; sourceTree = "<group>"; };
 		54527CCF233E5C9A003F9798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54527CD8233E5CBB003F9798 /* IntShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntShape.swift; sourceTree = "<group>"; };
-		54527CD9233E5CBB003F9798 /* PlainShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainShape.swift; sourceTree = "<group>"; };
-		54527CDA233E5CBB003F9798 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
-		54527CDB233E5CBB003F9798 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
-		54527CDD233E5CBB003F9798 /* Point+CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Point+CGPoint.swift"; sourceTree = "<group>"; };
-		54527CDE233E5CBB003F9798 /* CGPoint+Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Point.swift"; sourceTree = "<group>"; };
-		54527CE0233E5CBB003F9798 /* IntGeom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntGeom.swift; sourceTree = "<group>"; };
-		54527CE1233E5CBB003F9798 /* IntPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntPoint.swift; sourceTree = "<group>"; };
-		54527CE2233E5CBB003F9798 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		54AFC22824D69E6500B94D58 /* IntShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntShape.swift; sourceTree = "<group>"; };
+		54AFC22924D69E6500B94D58 /* PlainShape+Initializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlainShape+Initializers.swift"; sourceTree = "<group>"; };
+		54AFC22A24D69E6500B94D58 /* PlainShapeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainShapeList.swift; sourceTree = "<group>"; };
+		54AFC22B24D69E6500B94D58 /* PlainShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainShape.swift; sourceTree = "<group>"; };
+		54AFC22C24D69E6500B94D58 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		54AFC22D24D69E6500B94D58 /* IntPoint+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IntPoint+Array.swift"; sourceTree = "<group>"; };
+		54AFC22E24D69E6500B94D58 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		54AFC23024D69E6500B94D58 /* Point+CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Point+CGPoint.swift"; sourceTree = "<group>"; };
+		54AFC23124D69E6500B94D58 /* CGPoint+Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Point.swift"; sourceTree = "<group>"; };
+		54AFC23224D69E6500B94D58 /* PlainShape+Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlainShape+Validation.swift"; sourceTree = "<group>"; };
+		54AFC23424D69E6500B94D58 /* IntGeom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntGeom.swift; sourceTree = "<group>"; };
+		54AFC23524D69E6500B94D58 /* IntPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntPoint.swift; sourceTree = "<group>"; };
+		54AFC23624D69E6500B94D58 /* DBPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPoint.swift; sourceTree = "<group>"; };
+		54AFC23724D69E6500B94D58 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		54AFC23924D69E6500B94D58 /* IntPoint+Geom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IntPoint+Geom.swift"; sourceTree = "<group>"; };
+		54AFC23A24D69E6500B94D58 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		54AFC23B24D69E6500B94D58 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,52 +81,67 @@
 		54527CCD233E5C9A003F9798 /* iGeometry */ = {
 			isa = PBXGroup;
 			children = (
-				54527CD6233E5CBB003F9798 /* Source */,
+				54AFC22624D69E6500B94D58 /* Source */,
 				54527CCE233E5C9A003F9798 /* iGeometry.h */,
 				54527CCF233E5C9A003F9798 /* Info.plist */,
 			);
 			path = iGeometry;
 			sourceTree = "<group>";
 		};
-		54527CD6233E5CBB003F9798 /* Source */ = {
+		54AFC22624D69E6500B94D58 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				54527CD7233E5CBB003F9798 /* Shape */,
-				54527CDC233E5CBB003F9798 /* Extension */,
-				54527CDF233E5CBB003F9798 /* IntGeom */,
+				54AFC22724D69E6500B94D58 /* Shape */,
+				54AFC22F24D69E6500B94D58 /* Extension */,
+				54AFC23324D69E6500B94D58 /* IntGeom */,
+				54AFC23824D69E6500B94D58 /* Geom */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		54527CD7233E5CBB003F9798 /* Shape */ = {
+		54AFC22724D69E6500B94D58 /* Shape */ = {
 			isa = PBXGroup;
 			children = (
-				54527CD8233E5CBB003F9798 /* IntShape.swift */,
-				54527CD9233E5CBB003F9798 /* PlainShape.swift */,
-				54527CDA233E5CBB003F9798 /* Shape.swift */,
-				54527CDB233E5CBB003F9798 /* Vertex.swift */,
-				543DF7BC2463FF660086B9AC /* PlainShape+Initializers.swift */,
+				54AFC22824D69E6500B94D58 /* IntShape.swift */,
+				54AFC22924D69E6500B94D58 /* PlainShape+Initializers.swift */,
+				54AFC22A24D69E6500B94D58 /* PlainShapeList.swift */,
+				54AFC22B24D69E6500B94D58 /* PlainShape.swift */,
+				54AFC22C24D69E6500B94D58 /* Shape.swift */,
+				54AFC22D24D69E6500B94D58 /* IntPoint+Array.swift */,
+				54AFC22E24D69E6500B94D58 /* Vertex.swift */,
 			);
 			path = Shape;
 			sourceTree = "<group>";
 		};
-		54527CDC233E5CBB003F9798 /* Extension */ = {
+		54AFC22F24D69E6500B94D58 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				54527CDD233E5CBB003F9798 /* Point+CGPoint.swift */,
-				54527CDE233E5CBB003F9798 /* CGPoint+Point.swift */,
+				54AFC23024D69E6500B94D58 /* Point+CGPoint.swift */,
+				54AFC23124D69E6500B94D58 /* CGPoint+Point.swift */,
+				54AFC23224D69E6500B94D58 /* PlainShape+Validation.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		54527CDF233E5CBB003F9798 /* IntGeom */ = {
+		54AFC23324D69E6500B94D58 /* IntGeom */ = {
 			isa = PBXGroup;
 			children = (
-				54527CE0233E5CBB003F9798 /* IntGeom.swift */,
-				54527CE1233E5CBB003F9798 /* IntPoint.swift */,
-				54527CE2233E5CBB003F9798 /* Point.swift */,
+				54AFC23424D69E6500B94D58 /* IntGeom.swift */,
+				54AFC23524D69E6500B94D58 /* IntPoint.swift */,
+				54AFC23624D69E6500B94D58 /* DBPoint.swift */,
+				54AFC23724D69E6500B94D58 /* Point.swift */,
 			);
 			path = IntGeom;
+			sourceTree = "<group>";
+		};
+		54AFC23824D69E6500B94D58 /* Geom */ = {
+			isa = PBXGroup;
+			children = (
+				54AFC23924D69E6500B94D58 /* IntPoint+Geom.swift */,
+				54AFC23A24D69E6500B94D58 /* Circle.swift */,
+				54AFC23B24D69E6500B94D58 /* Triangle.swift */,
+			);
+			path = Geom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,16 +222,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54527CE9233E5CBB003F9798 /* IntGeom.swift in Sources */,
-				54527CE4233E5CBB003F9798 /* PlainShape.swift in Sources */,
-				54527CE7233E5CBB003F9798 /* Point+CGPoint.swift in Sources */,
-				54527CE6233E5CBB003F9798 /* Vertex.swift in Sources */,
-				54527CE8233E5CBB003F9798 /* CGPoint+Point.swift in Sources */,
-				54527CEB233E5CBB003F9798 /* Point.swift in Sources */,
-				54527CE5233E5CBB003F9798 /* Shape.swift in Sources */,
-				54527CEA233E5CBB003F9798 /* IntPoint.swift in Sources */,
-				54527CE3233E5CBB003F9798 /* IntShape.swift in Sources */,
-				543DF7BD2463FF660086B9AC /* PlainShape+Initializers.swift in Sources */,
+				54AFC24424D69E6500B94D58 /* CGPoint+Point.swift in Sources */,
+				54AFC24024D69E6500B94D58 /* Shape.swift in Sources */,
+				54AFC23F24D69E6500B94D58 /* PlainShape.swift in Sources */,
+				54AFC24124D69E6500B94D58 /* IntPoint+Array.swift in Sources */,
+				54AFC24C24D69E6500B94D58 /* Triangle.swift in Sources */,
+				54AFC24924D69E6500B94D58 /* Point.swift in Sources */,
+				54AFC23C24D69E6500B94D58 /* IntShape.swift in Sources */,
+				54AFC24624D69E6500B94D58 /* IntGeom.swift in Sources */,
+				54AFC23E24D69E6500B94D58 /* PlainShapeList.swift in Sources */,
+				54AFC24224D69E6500B94D58 /* Vertex.swift in Sources */,
+				54AFC24B24D69E6500B94D58 /* Circle.swift in Sources */,
+				54AFC24A24D69E6500B94D58 /* IntPoint+Geom.swift in Sources */,
+				54AFC24524D69E6500B94D58 /* PlainShape+Validation.swift in Sources */,
+				54AFC23D24D69E6500B94D58 /* PlainShape+Initializers.swift in Sources */,
+				54AFC24724D69E6500B94D58 /* IntPoint.swift in Sources */,
+				54AFC24324D69E6500B94D58 /* Point+CGPoint.swift in Sources */,
+				54AFC24824D69E6500B94D58 /* DBPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
