@@ -19,6 +19,6 @@ Pod::Spec.new do |spec|
   spec.watchos.deployment_target  = '4.0'
   spec.osx.deployment_target      = '10.9'
 
-  spec.source_files               = 'iGeometry/Source/**/*.swift'
+  spec.source_files               = 'Source/**/*.swift'
 
 end
