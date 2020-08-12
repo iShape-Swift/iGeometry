@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				54AFC37B24D6BBF000B94D58 /* Package.swift */,
-				54AFC31E24D6B7A100B94D58 /* Source */,
+				54AFC31E24D6B7A100B94D58 /* Sources */,
 				54AFC2EF24D6B62B00B94D58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		54AFC31E24D6B7A100B94D58 /* Source */ = {
+		54AFC31E24D6B7A100B94D58 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				54AFC2F124D6B62B00B94D58 /* iGeometry.h */,
@@ -166,7 +166,7 @@
 				54AFC32B24D6B7A100B94D58 /* IntGeom */,
 				54AFC33024D6B7A100B94D58 /* Geom */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		54AFC31F24D6B7A100B94D58 /* Shape */ = {
