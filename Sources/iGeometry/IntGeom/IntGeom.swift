@@ -6,8 +6,6 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
-import Darwin
-
 public struct IntGeom {
     
     public static let defGeom = IntGeom()
@@ -22,11 +20,11 @@ public struct IntGeom {
     }
 
     public func int(float: Float) -> Int64 {
-        return Int64(round(float * scale))
+        return Int64((float * scale).rounded(.toNearestOrAwayFromZero))
     }
     
     public func int(point: Point) -> IntPoint {
-        return IntPoint(x: Int64(round(point.x * scale)), y: Int64(round(point.y * scale)))
+        return IntPoint(x: Int64((point.x * scale).rounded(.toNearestOrAwayFromZero)), y: Int64((point.y * scale).rounded(.toNearestOrAwayFromZero)))
     }
     
     public func int(points: [Point]) -> [IntPoint] {
@@ -35,7 +33,7 @@ public struct IntGeom {
         var i = 0
         while i < n {
             let point = points[i]
-            array[i] = IntPoint(x: Int64(round(point.x * scale)), y: Int64(round(point.y * scale)))
+            array[i] = IntPoint(x: Int64((point.x * scale).rounded(.toNearestOrAwayFromZero)), y: Int64((point.y * scale).rounded(.toNearestOrAwayFromZero)))
             i &+= 1
         }
         return array

@@ -6,8 +6,6 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
-import Darwin
-
 public extension IntPoint {
     
     static func +(left: IntPoint, right: IntPoint) -> IntPoint {
@@ -31,7 +29,7 @@ public extension IntPoint {
     @inline(__always)
     func normal(iGeom: IntGeom) -> IntPoint {
         let p = iGeom.float(point: self)
-        let l = sqrt(p.x * p.x + p.y * p.y)
+        let l = (p.x * p.x + p.y * p.y).squareRoot()
         let k = 1 / l
         let x = k * p.x
         let y = k * p.y
