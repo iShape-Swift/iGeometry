@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name                       = 'iGeometry'
-  spec.version                    = '1.5.0'
+  spec.version                    = '1.5.1'
   spec.summary                    = 'Vectors operations in integer field'
   spec.authors                    = 'Nail Sharipov'
   spec.source                     = { :git => 'https://github.com/NailxSharipov/iGeometry.git', :tag => spec.version.to_s }
