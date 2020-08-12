@@ -6,6 +6,8 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
+import Darwin
+
 public struct IntGeom {
     
     public static let defGeom = IntGeom()
