@@ -1,5 +1,5 @@
 # iGeometry
-Vectors operations in integer field
+Vectors operations on integer field
 
 ---
 
