@@ -6,8 +6,6 @@
 //  Copyright © 2020 iShape. All rights reserved.
 //
 
-import Foundation
-
 public struct DBPoint {
     
     public static let zero = DBPoint(x: 0, y: 0)

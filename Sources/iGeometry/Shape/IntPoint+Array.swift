@@ -6,8 +6,6 @@
 //  Copyright © 2020 iShape. All rights reserved.
 //
 
-import Foundation
-
 public extension Array where Element == IntPoint {
     
     mutating func invert() {

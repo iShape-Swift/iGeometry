@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5497E73524E420FF0045B980 /* iGeometry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54AFC31624D6B75000B94D58 /* iGeometry.framework */; };
+		5497E74124E4215B0045B980 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497E73E24E4215B0045B980 /* XCTestManifests.swift */; };
+		5497E74224E4215B0045B980 /* iGeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5497E73F24E4215B0045B980 /* iGeometryTests.swift */; };
 		54AFC2F324D6B62B00B94D58 /* iGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 54AFC2F124D6B62B00B94D58 /* iGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54AFC33424D6B7A100B94D58 /* IntShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC32024D6B7A100B94D58 /* IntShape.swift */; };
 		54AFC33524D6B7A100B94D58 /* IntShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AFC32024D6B7A100B94D58 /* IntShape.swift */; };
@@ -73,7 +76,22 @@
 		54AFC37A24D6BB1B00B94D58 /* iGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 54AFC2F124D6B62B00B94D58 /* iGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5497E73624E420FF0045B980 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54AFC2E324D6B59A00B94D58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54AFC31524D6B75000B94D58;
+			remoteInfo = "iGeometry macOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		5497E73024E420FF0045B980 /* iGeometryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iGeometryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5497E73424E420FF0045B980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5497E73C24E4215B0045B980 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
+		5497E73E24E4215B0045B980 /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		5497E73F24E4215B0045B980 /* iGeometryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iGeometryTests.swift; sourceTree = "<group>"; };
 		54AFC2EE24D6B62B00B94D58 /* iGeometry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iGeometry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AFC2F124D6B62B00B94D58 /* iGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iGeometry.h; sourceTree = "<group>"; };
 		54AFC2F224D6B62B00B94D58 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -102,6 +120,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5497E72D24E420FF0045B980 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5497E73524E420FF0045B980 /* iGeometry.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54AFC2EB24D6B62B00B94D58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,9 +159,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5497E72A24E41FE70045B980 /* iGeometry */ = {
+			isa = PBXGroup;
+			children = (
+				54AFC2F124D6B62B00B94D58 /* iGeometry.h */,
+				54AFC31F24D6B7A100B94D58 /* Shape */,
+				54AFC32724D6B7A100B94D58 /* Extension */,
+				54AFC32B24D6B7A100B94D58 /* IntGeom */,
+				54AFC33024D6B7A100B94D58 /* Geom */,
+			);
+			path = iGeometry;
+			sourceTree = "<group>";
+		};
+		5497E73B24E4215B0045B980 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5497E73C24E4215B0045B980 /* LinuxMain.swift */,
+				5497E73D24E4215B0045B980 /* iGeometryTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		5497E73D24E4215B0045B980 /* iGeometryTests */ = {
+			isa = PBXGroup;
+			children = (
+				5497E73424E420FF0045B980 /* Info.plist */,
+				5497E73E24E4215B0045B980 /* XCTestManifests.swift */,
+				5497E73F24E4215B0045B980 /* iGeometryTests.swift */,
+			);
+			path = iGeometryTests;
+			sourceTree = "<group>";
+		};
 		54AFC2E224D6B59A00B94D58 = {
 			isa = PBXGroup;
 			children = (
+				5497E73B24E4215B0045B980 /* Tests */,
 				54AFC37B24D6BBF000B94D58 /* Package.swift */,
 				54AFC31E24D6B7A100B94D58 /* Sources */,
 				54AFC2EF24D6B62B00B94D58 /* Products */,
@@ -149,6 +207,7 @@
 				54AFC2FC24D6B6AF00B94D58 /* iGeometry.framework */,
 				54AFC30924D6B6FF00B94D58 /* iGeometry.framework */,
 				54AFC31624D6B75000B94D58 /* iGeometry.framework */,
+				5497E73024E420FF0045B980 /* iGeometryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,15 +215,11 @@
 		54AFC31E24D6B7A100B94D58 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				54AFC2F124D6B62B00B94D58 /* iGeometry.h */,
+				5497E72A24E41FE70045B980 /* iGeometry */,
 				54AFC2F224D6B62B00B94D58 /* Info-iOS.plist */,
 				54AFC2FF24D6B6AF00B94D58 /* Info-watchOS.plist */,
 				54AFC30C24D6B6FF00B94D58 /* Info-tvOS.plist */,
 				54AFC31924D6B75000B94D58 /* Info-macOS.plist */,
-				54AFC31F24D6B7A100B94D58 /* Shape */,
-				54AFC32724D6B7A100B94D58 /* Extension */,
-				54AFC32B24D6B7A100B94D58 /* IntGeom */,
-				54AFC33024D6B7A100B94D58 /* Geom */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -250,6 +305,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5497E72F24E420FF0045B980 /* iGeometryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5497E73824E420FF0045B980 /* Build configuration list for PBXNativeTarget "iGeometryTests" */;
+			buildPhases = (
+				5497E72C24E420FF0045B980 /* Sources */,
+				5497E72D24E420FF0045B980 /* Frameworks */,
+				5497E72E24E420FF0045B980 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5497E73724E420FF0045B980 /* PBXTargetDependency */,
+			);
+			name = iGeometryTests;
+			productName = iGeometryTests;
+			productReference = 5497E73024E420FF0045B980 /* iGeometryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		54AFC2ED24D6B62B00B94D58 /* iGeometry iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54AFC2F424D6B62B00B94D58 /* Build configuration list for PBXNativeTarget "iGeometry iOS" */;
@@ -328,8 +401,12 @@
 		54AFC2E324D6B59A00B94D58 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
 				TargetAttributes = {
+					5497E72F24E420FF0045B980 = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					54AFC2ED24D6B62B00B94D58 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -361,11 +438,19 @@
 				54AFC2FB24D6B6AF00B94D58 /* iGeometry watchOS */,
 				54AFC30824D6B6FF00B94D58 /* iGeometry tvOS */,
 				54AFC31524D6B75000B94D58 /* iGeometry macOS */,
+				5497E72F24E420FF0045B980 /* iGeometryTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5497E72E24E420FF0045B980 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54AFC2EC24D6B62B00B94D58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -397,6 +482,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5497E72C24E420FF0045B980 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5497E74124E4215B0045B980 /* XCTestManifests.swift in Sources */,
+				5497E74224E4215B0045B980 /* iGeometryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54AFC2EA24D6B62B00B94D58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -487,7 +581,150 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5497E73724E420FF0045B980 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54AFC31524D6B75000B94D58 /* iGeometry macOS */;
+			targetProxy = 5497E73624E420FF0045B980 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5497E73924E420FF0045B980 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/iGeometryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ishape.iGeometryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5497E73A24E420FF0045B980 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/iGeometryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ishape.iGeometryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		54AFC2E724D6B59A00B94D58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1114,6 +1351,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5497E73824E420FF0045B980 /* Build configuration list for PBXNativeTarget "iGeometryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5497E73924E420FF0045B980 /* Debug */,
+				5497E73A24E420FF0045B980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		54AFC2E624D6B59A00B94D58 /* Build configuration list for PBXProject "iGeometry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

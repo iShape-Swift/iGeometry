@@ -6,8 +6,6 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
-import Foundation
-
 public typealias Index = Int
 public let null: Index = -1
 

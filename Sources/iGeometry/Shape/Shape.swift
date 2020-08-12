@@ -6,8 +6,6 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
-import Foundation
-
 public struct Shape {
     
     public static let empty = Shape(hull: [], holes: [])

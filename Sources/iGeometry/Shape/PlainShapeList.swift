@@ -6,8 +6,6 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
-import Foundation
-
 public struct PlainShapeList {
     
     public static let empty = PlainShapeList(points: [], layouts: [], segments: [])

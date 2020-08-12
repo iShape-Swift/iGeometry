@@ -6,8 +6,6 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
-import Foundation
-
 public struct Point: Equatable {
     
     public static let zero = Point(x: 0, y: 0)

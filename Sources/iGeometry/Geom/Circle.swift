@@ -6,8 +6,6 @@
 //  Copyright © 2020 iShape. All rights reserved.
 //
 
-import Foundation
-
 public struct Circle {
     public let center: Point
     public let radius: Float

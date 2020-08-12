@@ -6,8 +6,6 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
-import Foundation
-
 public extension IntPoint {
     
     static func +(left: IntPoint, right: IntPoint) -> IntPoint {
