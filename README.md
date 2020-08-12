@@ -28,7 +28,7 @@ let package = Package(
     name: "[your name]",
     products: [
         dependencies: [
-            .package(url: "https://github.com/iShape-Swift/iGeometry", from: "0.1.3")
+            .package(url: "https://github.com/iShape-Swift/iGeometry", from: "1.7.0")
         ],
         targets: [
             .target(
