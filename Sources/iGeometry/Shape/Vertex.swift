@@ -11,14 +11,16 @@ public let null: Index = -1
 
 public struct Vertex {
     
-    public static let empty = Vertex(index: null, point: .zero)
+    public static let empty = Vertex(index: null, isExtra: false, point: .zero)
     
     public let index: Index
+    public let isExtra: Bool
     public let point: IntPoint
     
-    public init(index: Index, point: IntPoint) {
+    public init(index: Index, isExtra: Bool, point: IntPoint) {
         self.index = index
         self.point = point
+        self.isExtra = isExtra
     }
     
 }
