@@ -18,6 +18,22 @@ public struct Point: Equatable {
         self.y = y
     }
     
+    @inline(__always)
+    public func sqrDistance(point: Point) -> Float {
+        let dx = point.x - self.x
+        let dy = point.y - self.y
+
+        return dx * dx + dy * dy
+    }
+    
+    static func +(left: Point, right: Point) -> Point {
+        return Point(x: left.x + right.x, y: left.y + right.y)
+    }
+
+    static func -(left: Point, right: Point) -> Point {
+        return Point(x: left.x - right.x, y: left.y - right.y)
+    }
+    
     public static func == (lhs: Point, rhs: Point) -> Bool {
         return lhs.x == rhs.x && lhs.y == rhs.y
     }

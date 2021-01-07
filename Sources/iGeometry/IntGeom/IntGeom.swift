@@ -13,18 +13,24 @@ public struct IntGeom {
     public static let maxBits = 31
     public let scale: Float
     public let invertScale: Float
+    public let sqrInvertScale: Float
     
     public init(scale: Float = 10000) {
         self.scale = scale
         self.invertScale = 1 / scale
+        self.sqrInvertScale = 1 / scale / scale
     }
 
     public func int(float: Float) -> Int64 {
-        return Int64((float * scale).rounded(.toNearestOrAwayFromZero))
+        Int64((float * scale).rounded(.toNearestOrAwayFromZero))
+    }
+    
+    public func sqrInt(float: Float) -> Int64 {
+        Int64((float * scale * scale).rounded(.toNearestOrAwayFromZero))
     }
     
     public func int(point: Point) -> IntPoint {
-        return IntPoint(x: Int64((point.x * scale).rounded(.toNearestOrAwayFromZero)), y: Int64((point.y * scale).rounded(.toNearestOrAwayFromZero)))
+        IntPoint(x: Int64((point.x * scale).rounded(.toNearestOrAwayFromZero)), y: Int64((point.y * scale).rounded(.toNearestOrAwayFromZero)))
     }
     
     public func int(points: [Point]) -> [IntPoint] {
@@ -52,11 +58,15 @@ public struct IntGeom {
     }
     
     public func float(int: Int64) -> Float {
-        return Float(int) * invertScale
+        Float(int) * invertScale
+    }
+    
+    public func sqrFloat(int: Int64) -> Float {
+        Float(int) * sqrInvertScale
     }
     
     public func float(point: IntPoint) -> Point {
-        return Point(x: Float(point.x) * invertScale, y: Float(point.y) * invertScale)
+        Point(x: Float(point.x) * invertScale, y: Float(point.y) * invertScale)
     }
     
     public func float(points: [IntPoint]) -> [Point] {

@@ -7,6 +7,23 @@
 //
 
 public extension Array where Element == IntPoint {
+
+    public var area: Int64 {
+        guard var p1 = self.last else {
+            return 0
+        }
+        
+        var sum: Int64 = 0
+        
+        for p2 in self {
+            let x = p2.x &- p1.x
+            let y = p2.y &+ p1.y
+            sum &+= x * y
+            p1 = p2
+        }
+
+        return sum >> 1
+    }
     
     mutating func invert() {
         let n = self.count
@@ -19,5 +36,4 @@ public extension Array where Element == IntPoint {
             self[j] = a
         }
     }
-
 }

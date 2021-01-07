@@ -20,7 +20,7 @@ public struct Triangle {
  
     @inline(__always)
     public var area: Float {
-        return 0.5 * (a.x * (c.y - b.y) + b.x * (a.y - c.y) + c.x * (b.y - a.y))
+        0.5 * (a.x * (c.y - b.y) + b.x * (a.y - c.y) + c.x * (b.y - a.y))
     }
     
     public var circumscribedСircle: Circle {
