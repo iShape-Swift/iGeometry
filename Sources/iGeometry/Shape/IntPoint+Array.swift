@@ -8,7 +8,7 @@
 
 public extension Array where Element == IntPoint {
 
-    public var area: Int64 {
+    var area: Int64 {
         guard var p1 = self.last else {
             return 0
         }
