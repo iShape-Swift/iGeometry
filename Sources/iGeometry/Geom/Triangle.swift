@@ -23,15 +23,17 @@ public struct Triangle {
         0.5 * (a.x * (c.y - b.y) + b.x * (a.y - c.y) + c.x * (b.y - a.y))
     }
     
+    @inlinable
     public var circumscribedСircle: Circle {
-        return Triangle.circumscribedСircle(a: a, b: b, c: c)
+        Triangle.circumscribedСircle(a: a, b: b, c: c)
     }
     
+    @inlinable
     public var inscribedСircle: Circle {
-        return Triangle.inscribedСircle(a: a, b: b, c: c)
+        Triangle.inscribedСircle(a: a, b: b, c: c)
     }
     
-    @inline(__always)
+    @inlinable
     public static func circumscribedСircle(a: Point, b: Point, c: Point) -> Circle {
         let d = 2 * (a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y))
         let x = ((a.x * a.x + a.y * a.y) * (b.y - c.y) + (b.x * b.x + b.y * b.y) * (c.y - a.y) + (c.x * c.x + c.y * c.y) * (a.y - b.y)) / d
@@ -42,7 +44,7 @@ public struct Triangle {
         return Circle(center: Point(x: x, y: y), radius: r)
     }
     
-    @inline(__always)
+    @inlinable
     public static func inscribedСircle(a: Point, b: Point, c: Point) -> Circle {
         let ABx = a.x - b.x
         let ABy = a.y - b.y
@@ -62,6 +64,7 @@ public struct Triangle {
         let Oy = (BC * a.y + AC * b.y + AB * c.y) / p
         
         let r = ((-BC + AC + AB) * (BC - AC + AB) * (BC + AC - AB) / (4 * p)).squareRoot()
+        
         return Circle(center: Point(x: Ox, y: Oy), radius: r)
     }
 }

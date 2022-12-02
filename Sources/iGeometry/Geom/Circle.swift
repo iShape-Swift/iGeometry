@@ -7,10 +7,12 @@
 //
 
 public struct Circle {
+    
     public let center: Point
     public let radius: Float
     
-    init(center: Point, radius: Float) {
+    @inlinable
+    public init(center: Point, radius: Float) {
         self.center = center
         self.radius = radius
     }

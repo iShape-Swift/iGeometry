@@ -18,7 +18,7 @@ public struct PlainShapeList {
             return begin + length - 1
         }
         
-        
+        @inlinable
         public init(begin: Int, length: Int) {
             self.begin = begin
             self.length = length
@@ -29,7 +29,6 @@ public struct PlainShapeList {
     public private (set) var layouts: [PlainShape.Layout]
     public private (set) var segments: [Segment]
     
-    
     public init(minimumPointsCapacity: Int, minimumLayoutsCapacity: Int, minimumSegmentsCapacity: Int) {
         self.points = [IntPoint]()
         self.points.reserveCapacity(minimumPointsCapacity)
@@ -38,19 +37,21 @@ public struct PlainShapeList {
         self.segments = [Segment]()
         self.segments.reserveCapacity(minimumSegmentsCapacity)
     }
-    
+
     public init(points: [IntPoint], layouts: [PlainShape.Layout], segments: [Segment]) {
         self.points = points
         self.layouts = layouts
         self.segments = segments
     }
     
+    
     public init(plainShape: PlainShape) {
         self.segments = [Segment(begin: 0, length: plainShape.layouts.count)]
         self.layouts = plainShape.layouts
         self.points = plainShape.points
     }
-    
+
+    @inlinable
     public func get(index: Int) -> PlainShape {
         let segment = self.segments[index]
 
@@ -78,6 +79,7 @@ public struct PlainShapeList {
         self.layouts.append(contentsOf: plainShape.layouts)
     }
     
+    @inlinable
     public mutating func append(list: PlainShapeList) {
         for i in 0..<list.layouts.count {
             let plainShape = list.get(index: i)
