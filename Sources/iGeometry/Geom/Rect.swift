@@ -41,6 +41,37 @@ public struct Rect {
     }
     
     @inlinable
+    public init(points: [IntPoint]) {
+        var minX = Int64.max
+        var minY = Int64.max
+        var maxX = Int64.min
+        var maxY = Int64.min
+
+        for p in points {
+            if minX > p.x {
+                minX = p.x
+            }
+        
+            if minY > p.y {
+                minY = p.y
+            }
+        
+            if maxX < p.x {
+                maxX = p.x
+            }
+        
+            if maxY < p.y {
+                maxY = p.y
+            }
+        }
+        
+        self.minX = minX
+        self.minY = minY
+        self.maxX = maxX
+        self.maxY = maxY
+    }
+    
+    @inlinable
     public mutating func assimilate(p: IntPoint) {
         if minX > p.x {
             minX = p.x
