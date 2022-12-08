@@ -6,39 +6,41 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
+import CoreGraphics
+
 public struct IntGeom {
     
     public static let defGeom = IntGeom()
     
     public static let maxBits = 31
-    public let scale: Float
-    public let invertScale: Float
-    public let sqrInvertScale: Float
+    public let scale: CGFloat
+    public let invertScale: CGFloat
+    public let sqrInvertScale: CGFloat
     
     @inlinable
-    public init(scale: Float = 10000) {
+    public init(scale: CGFloat = 10000) {
         self.scale = scale
         self.invertScale = 1 / scale
         self.sqrInvertScale = 1 / scale / scale
     }
 
     @inlinable
-    public func int(float: Float) -> Int64 {
+    public func int(float: CGFloat) -> Int64 {
         Int64((float * scale).rounded(.toNearestOrAwayFromZero))
     }
     
     @inlinable
-    public func sqrInt(float: Float) -> Int64 {
+    public func sqrInt(float: CGFloat) -> Int64 {
         Int64((float * scale * scale).rounded(.toNearestOrAwayFromZero))
     }
     
     @inlinable
-    public func int(point: Point) -> IntPoint {
+    public func int(point: CGPoint) -> IntPoint {
         IntPoint(x: Int64((point.x * scale).rounded(.toNearestOrAwayFromZero)), y: Int64((point.y * scale).rounded(.toNearestOrAwayFromZero)))
     }
     
     @inlinable
-    public func int(points: [Point]) -> [IntPoint] {
+    public func int(points: [CGPoint]) -> [IntPoint] {
         let n = points.count
         var array = Array<IntPoint>(repeating: .zero, count: n)
         var i = 0
@@ -51,7 +53,7 @@ public struct IntGeom {
     }
     
     @inlinable
-    public func int(paths: [[Point]]) -> [[IntPoint]] {
+    public func int(paths: [[CGPoint]]) -> [[IntPoint]] {
         let n = paths.count
         var array = [[IntPoint]]()
         array.reserveCapacity(n)
@@ -64,37 +66,37 @@ public struct IntGeom {
     }
     
     @inlinable
-    public func float(int: Int64) -> Float {
-        Float(int) * invertScale
+    public func float(int: Int64) -> CGFloat {
+        CGFloat(int) * invertScale
     }
     
     @inlinable
-    public func sqrFloat(int: Int64) -> Float {
-        Float(int) * sqrInvertScale
+    public func sqrFloat(int: Int64) -> CGFloat {
+        CGFloat(int) * sqrInvertScale
     }
     
     @inlinable
-    public func float(point: IntPoint) -> Point {
-        Point(x: Float(point.x) * invertScale, y: Float(point.y) * invertScale)
+    public func float(point: IntPoint) -> CGPoint {
+        CGPoint(x: CGFloat(point.x) * invertScale, y: CGFloat(point.y) * invertScale)
     }
     
     @inlinable
-    public func float(points: [IntPoint]) -> [Point] {
+    public func float(points: [IntPoint]) -> [CGPoint] {
         let n = points.count
-        var array = Array<Point>(repeating: .zero, count: n)
+        var array = Array<CGPoint>(repeating: .zero, count: n)
         var i = 0
         while i < n {
             let point = points[i]
-            array[i] = Point(x: Float(point.x) * invertScale, y: Float(point.y) * invertScale)
+            array[i] = CGPoint(x: CGFloat(point.x) * invertScale, y: CGFloat(point.y) * invertScale)
             i &+= 1
         }
         return array
     }
     
     @inlinable
-    public func float(paths: [[IntPoint]]) -> [[Point]] {
+    public func float(paths: [[IntPoint]]) -> [[CGPoint]] {
         let n = paths.count
-        var array = [[Point]]()
+        var array = [[CGPoint]]()
         array.reserveCapacity(n)
         var i = 0
         while i < n {

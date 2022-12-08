@@ -6,6 +6,10 @@
 //  Copyright © 2019 iShape. All rights reserved.
 //
 
+#if DEBUG
+import CoreGraphics
+#endif
+
 public struct IntPoint {
     
     public static let zero = IntPoint(x: 0, y: 0)
@@ -15,8 +19,8 @@ public struct IntPoint {
     public let y: Int64
     
 #if DEBUG
-    public let X: Float
-    public let Y: Float
+    public let X: CGFloat
+    public let Y: CGFloat
 #endif
     
     @inlinable
@@ -43,6 +47,17 @@ extension IntPoint: Equatable {
     }
 }
 
+extension IntPoint: Hashable {
+    
+    @inlinable
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(x)
+        hasher.combine(y)
+    }
+
+}
+
+
 #if DEBUG
 extension IntPoint: CustomStringConvertible {
     
@@ -52,3 +67,4 @@ extension IntPoint: CustomStringConvertible {
     
 }
 #endif
+

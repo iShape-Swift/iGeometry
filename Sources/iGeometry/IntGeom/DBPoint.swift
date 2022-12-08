@@ -54,12 +54,12 @@ public struct DBPoint {
     }
 
     @inlinable
-    static func +(left: DBPoint, right: DBPoint) -> DBPoint {
+    public static func +(left: DBPoint, right: DBPoint) -> DBPoint {
         DBPoint(x: left.x + right.x, y: left.y + right.y)
     }
 
     @inlinable
-    static func -(left: DBPoint, right: DBPoint) -> DBPoint {
+    public static func -(left: DBPoint, right: DBPoint) -> DBPoint {
         DBPoint(x: left.x - right.x, y: left.y - right.y)
     }
     

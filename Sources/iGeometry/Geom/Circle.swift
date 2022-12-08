@@ -6,13 +6,15 @@
 //  Copyright © 2020 iShape. All rights reserved.
 //
 
+import CoreGraphics
+
 public struct Circle {
     
-    public let center: Point
-    public let radius: Float
+    public let center: CGPoint
+    public let radius: CGFloat
     
     @inlinable
-    public init(center: Point, radius: Float) {
+    public init(center: CGPoint, radius: CGFloat) {
         self.center = center
         self.radius = radius
     }

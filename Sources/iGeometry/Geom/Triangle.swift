@@ -6,20 +6,22 @@
 //  Copyright © 2020 iShape. All rights reserved.
 //
 
+import CoreGraphics
+
 public struct Triangle {
     
-    public let a: Point
-    public let b: Point
-    public let c: Point
+    public let a: CGPoint
+    public let b: CGPoint
+    public let c: CGPoint
     
-    public init(a: Point, b: Point, c: Point) {
+    public init(a: CGPoint, b: CGPoint, c: CGPoint) {
         self.a = a
         self.b = b
         self.c = c
     }
  
-    @inline(__always)
-    public var area: Float {
+    @inlinable
+    public var area: CGFloat {
         0.5 * (a.x * (c.y - b.y) + b.x * (a.y - c.y) + c.x * (b.y - a.y))
     }
     
@@ -34,18 +36,18 @@ public struct Triangle {
     }
     
     @inlinable
-    public static func circumscribedСircle(a: Point, b: Point, c: Point) -> Circle {
+    public static func circumscribedСircle(a: CGPoint, b: CGPoint, c: CGPoint) -> Circle {
         let d = 2 * (a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y))
         let x = ((a.x * a.x + a.y * a.y) * (b.y - c.y) + (b.x * b.x + b.y * b.y) * (c.y - a.y) + (c.x * c.x + c.y * c.y) * (a.y - b.y)) / d
         let y = ((a.x * a.x + a.y * a.y) * (c.x - b.x) + (b.x * b.x + b.y * b.y) * (a.x - c.x) + (c.x * c.x + c.y * c.y) * (b.x - a.x)) / d
         
         let r = ((a.x - x) * (a.x - x) + (a.y - y) * (a.y - y)).squareRoot()
         
-        return Circle(center: Point(x: x, y: y), radius: r)
+        return Circle(center: CGPoint(x: x, y: y), radius: r)
     }
     
     @inlinable
-    public static func inscribedСircle(a: Point, b: Point, c: Point) -> Circle {
+    public static func inscribedСircle(a: CGPoint, b: CGPoint, c: CGPoint) -> Circle {
         let ABx = a.x - b.x
         let ABy = a.y - b.y
         let AB = (ABx * ABx + ABy * ABy).squareRoot()
@@ -65,6 +67,6 @@ public struct Triangle {
         
         let r = ((-BC + AC + AB) * (BC - AC + AB) * (BC + AC - AB) / (4 * p)).squareRoot()
         
-        return Circle(center: Point(x: Ox, y: Oy), radius: r)
+        return Circle(center: CGPoint(x: Ox, y: Oy), radius: r)
     }
 }
