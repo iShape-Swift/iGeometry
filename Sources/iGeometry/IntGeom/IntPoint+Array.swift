@@ -38,4 +38,26 @@ public extension Array where Element == IntPoint {
             self[j] = a
         }
     }
+
+    mutating func removeSameLinePoints() {
+        let n = self.count
+        guard n > 2 else {
+            self.removeAll()
+            return
+        }
+        var result = [IntPoint]()
+        result.reserveCapacity(n)
+        
+        var a = self[n - 2]
+        var b = self[n - 1]
+        for c in self {
+            if !ABLine(a: a, b: b).isSameLine(point: c) {
+                result.append(b)
+            }
+            a = b
+            b = c
+        }
+        
+        self = result
+    }
 }
