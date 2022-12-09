@@ -11,6 +11,11 @@ import CoreGraphics
 public extension IntPoint {
     
     @inlinable
+    var sqrMagnitude: Int64 {
+        x * x + y * y
+    }
+    
+    @inlinable
     static func +(left: IntPoint, right: IntPoint) -> IntPoint {
         IntPoint(x: left.x + right.x, y: left.y + right.y)
     }
