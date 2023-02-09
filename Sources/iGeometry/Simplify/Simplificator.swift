@@ -56,9 +56,9 @@ public struct Simplificator {
         case .no:
 #if DEBUG
             assertionFailure("Simplificator is No, are not allowed at production")
-#else
-            debugPrint("Simplificator is No, are not allowed at production")
             return Result(isModified: false, points: [])
+#else
+            fatalError("Simplificator is No, are not allowed at production")
 #endif
         }
     }
